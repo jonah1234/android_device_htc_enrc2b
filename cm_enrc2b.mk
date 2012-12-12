@@ -89,12 +89,17 @@ PRODUCT_COPY_FILES += \
     device/htc/enrc2b/vold.fstab:system/etc/vold.fstab
 
 # Input device configeration files
+# for remapped APP_SWITCH to MENU
 PRODUCT_COPY_FILES += \
     device/htc/enrc2b/usr/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
-    device/htc/enrc2b/usr/keylayout/tegra-kbc.kl:system/usr/keylayout/tegra-kbc.kl \
-    device/htc/enrc2b/usr/idc/atmel-maxtouch.idc:system/usr/idc/atmel-maxtouch.idc \
-    device/htc/enrc2b/usr/idc/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc \
-    device/htc/enrc2b/usr/idc/tv-touchscreen.idc:system/usr/idc/tv-touchscreen.idc
+
+# properitary ones
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/proprietary/usr/keylayout/tegra-kbc.kl:/system/usr/keylayout/tegra-kbc.kl \
+    $(LOCAL_PATH)/proprietary/usr/keylayout/projector-Keypad.kl:/system/usr/keylayout/projector-Keypad.kl \
+    $(LOCAL_PATH)/proprietary/usr/idc/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc \
+    $(LOCAL_PATH)/proprietary/usr/idc/tv-touchscreen.idc:system/usr/idc/tv-touchscreen.idc \
+    $(LOCAL_PATH)/proprietary/usr/idc/projector_input.idc:system/usr/idc/projector_input.idc
 
 # Any prebuilt kernel modules
 # maxwen: MUST BE BLADE MODULES!!!!
@@ -290,6 +295,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/hw/audio.primary.tegra.so:/system/lib/hw/audio.primary.tegra.so \
     $(LOCAL_PATH)/proprietary/lib/hw/camera.tegra.so:/system/lib/hw/camera.tegra.so \
     $(LOCAL_PATH)/proprietary/lib/hw/sensors.enrc2b.so:/system/lib/hw/sensors.enrc2b.so \
+    $(LOCAL_PATH)/proprietary/lib/hw/nfc.enrc2b.so:/system/lib/hw/nfc.enrc2b.so \
     $(LOCAL_PATH)/proprietary/lib/libardrv_dynamic.so:/system/lib/libardrv_dynamic.so \
     $(LOCAL_PATH)/proprietary/lib/libcall_volume.so:/system/lib/libcall_volume.so \
     $(LOCAL_PATH)/proprietary/lib/libcgdrv.so:/system/lib/libcgdrv.so \
@@ -389,9 +395,8 @@ PRODUCT_COPY_FILES += \
 
 # Firmware
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/proprietary/etc/firmware/bcm4329.hcd:system/etc/firmware/bcm4329.hcd \
-    $(LOCAL_PATH)/proprietary/etc/firmware/bcm4329.hcd:system/etc/firmware/bcm4330.hcd \
-    $(LOCAL_PATH)/proprietary/etc/firmware/BCM4334B0_002.001.013.0767.0777.hcd:system/etc/firmware/BCM4334B0_002.001.013.0767.0777.hcd \
+    $(LOCAL_PATH)/proprietary/etc/firmware/bcm4330.hcd:system/etc/firmware/bcm4330.hcd \
+    $(LOCAL_PATH)/proprietary/etc/firmware/BCM4334B0_002.001.013.0767.0777.hcd:system/etc/firmware/bcm4334.hcd \
     $(LOCAL_PATH)/proprietary/etc/firmware/fw_bcm4334.bin:system/etc/firmware/fw_bcm4334.bin \
     $(LOCAL_PATH)/proprietary/etc/firmware/fw_bcm4334_apsta.bin:system/etc/firmware/fw_bcm4334_apsta.bin \
     $(LOCAL_PATH)/proprietary/etc/firmware/fw_bcm4334_p2p.bin:system/etc/firmware/fw_bcm4334_p2p.bin \
@@ -483,9 +488,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/etc/Flash_Loader.conf:/system/etc/Flash_Loader.conf \
     $(LOCAL_PATH)/proprietary/etc/QUO_6260.fls.clean:/system/etc/QUO_6260.fls.clean
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/proprietary/usr/keylayout/qwerty.kl:/system/usr/keylayout/qwerty.kl \
-    $(LOCAL_PATH)/proprietary/usr/keylayout/tegra-kbc.kl:/system/usr/keylayout/tegra-kbc.kl
 
 ##Vendor Section Finish##
 
