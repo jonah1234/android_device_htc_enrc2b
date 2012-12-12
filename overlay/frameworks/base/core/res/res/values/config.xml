@@ -36,12 +36,15 @@
     <!-- disable menu hard key in non-pattern lockscreen -->
     <bool name="config_disableMenuKeyInLockScreen">true</bool>
 
+<add-resource>
     <!-- Package name providing network location support. -->
     <string name="config_networkLocationProviderPackageName" translatable="false">com.google.android.location</string>
 
+<add-resource>
     <!-- Package name providing geocoder API support. -->
     <string name="config_geocodeProviderPackageName" translatable="false">com.google.android.location</string>
 
+<add-resource>
     <!-- Flag indicating whether we should enable the automatic brightness in Settings.
          config_hardware_automatic_brightness_available is not set, so we will use software implementation -->
     <bool name="config_automatic_brightness_available">true</bool>
@@ -55,7 +58,8 @@
          Zone N:        array[N - 1] <= LUX < array[N]
          Zone N + 1:    array[N] <= LUX < infinity
 
-         Must be overridden in platform specific overlays -->
+        Must be overridden in platform specific overlays -->
+<add-resource>
     <integer-array name="config_autoBrightnessLevels">
         <item>11</item>
         <item>41</item>
