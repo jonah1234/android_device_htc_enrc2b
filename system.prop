@@ -120,5 +120,3 @@ ro.product.hwreset.timer1 = 5
 ro.product.hwreset.timer2 = 8
 
 #debugging
-
-ro.crypto.fuse_sdcard true
