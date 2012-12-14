@@ -140,10 +140,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.usb.default \
-    libtinyalsa \
-    libaudioutils \
-    tinymix \
-    tinyplay \
     tinyca \
     libinvensense_mpl 
 
@@ -276,7 +272,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/bin/htcfs:/system/bin/htcfs \
     $(LOCAL_PATH)/proprietary/etc/voicemail-conf.xml:/system/etc/voicemail-conf.xml \
     $(LOCAL_PATH)/proprietary/bin/IMCdownload:/system/bin/IMCdownload \
-    $(LOCAL_PATH)/proprietary/bin/htc_ebdlogd:/system/bin/htc_ebdlogd
+    $(LOCAL_PATH)/proprietary/bin/htc_ebdlogd:/system/bin/htc_ebdlogd\
+    $(LOCAL_PATH)/proprietary/bin/tinymix:/system/bin/tinymix \
+    $(LOCAL_PATH)/proprietary/bin/tinyplay:/system/bin/tinyplay
+
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/egl/libEGL_perfhud.so:/system/lib/egl/libEGL_perfhud.so \
@@ -391,7 +390,13 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/libscalado_htcalbum2.so:/system/lib/libscalado_htcalbum2.so \
     $(LOCAL_PATH)/proprietary/lib/libscaladoutil.so:/system/lib/libscaladoutil.so \
     $(LOCAL_PATH)/proprietary/lib/libhtc-opt2.so:/system/lib/libhtc-opt2.so \
-    $(LOCAL_PATH)/proprietary/lib/libasound.so:/system/lib/libasound.so
+    $(LOCAL_PATH)/proprietary/lib/libasound.so:/system/lib/libasound.so \
+    $(LOCAL_PATH)/proprietary/lib/invoke_mock_media_player.so:/system/lib/invoke_mock_media_player.so \
+    $(LOCAL_PATH)/proprietary/lib/libaudioeffect_jni.so:/system/lib/libaudioeffect_jni.so \
+    $(LOCAL_PATH)/proprietary/lib/libaudioflinger.so:/system/lib/libaudioflinger.so \
+    $(LOCAL_PATH)/proprietary/lib/libaudioutils.so:/system/lib/libaudioutils.so \
+    $(LOCAL_PATH)/proprietary/lib/libtinyalsa.so:/system/lib/libtinyalsa.so
+
 
 
 # Firmware
