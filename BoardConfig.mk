@@ -51,6 +51,12 @@ TARGET_TEGRA_VERSION := t30
 USE_OPENGL_RENDERER := true
 BOARD_EGL_CFG := device/htc/enrc2b/configs/egl.cfg
 
+ifneq ($(HAVE_NVIDIA_PROP_SRC),false)
+# needed for source compilation of nvidia libraries
+-include device/nvidia/proprietary_src/build/definitions.mk
+-include device/nvidia/build/definitions.mk
+endif
+
 # Wifi related defines
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
 WPA_SUPPLICANT_VERSION      := VER_0_8_X
@@ -83,6 +89,7 @@ COMMON_GLOBAL_CFLAGS += -DHTCLOG
 
 # Kernel / Ramdisk
 #TARGET_PREBUILT_KERNEL := device/htc/enrc2b/prebuilt/kernel
+LOCAL_KERNEL := device/htc/enrc2b/prebuilt/kernel
 TARGET_PROVIDES_INIT_TARGET_RC := true
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 8388608
