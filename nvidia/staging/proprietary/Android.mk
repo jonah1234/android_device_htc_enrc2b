@@ -14,7 +14,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),grouper)
+ifeq ($(TARGET_DEVICE),enrc2b)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := gralloc.tegra

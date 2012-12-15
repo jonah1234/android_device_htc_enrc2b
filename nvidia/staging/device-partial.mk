@@ -24,8 +24,8 @@ PRODUCT_PACKAGES := \
     libEGL_tegra \
     libGLESv1_CM_tegra \
     libGLESv2_tegra \
-    gralloc.tegra3 \
-    hwcomposer.tegra3 \
+    gralloc.tegra \
+    hwcomposer.tegra \
     libardrv_dynamic \
     libcgdrv \
     libnvapputil \
