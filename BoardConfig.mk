@@ -31,7 +31,6 @@ TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 
 # Board 
-TARGET_DEVICE := enrc2b
 TARGET_BOARD_PLATFORM := tegra
 TARGET_NO_BOOTLOADER := true
 TARGET_CPU_ABI := armeabi-v7a
