@@ -7,4 +7,5 @@
 /data       ext4        /dev/block/mmcblk0p14
 /misc       emmc        /dev/block/mmcblk0p16
 /devlog     ext4        /dev/block/mmcblk0p18
+ sdcard     datamedia   /dev/null
 
